@@ -1,50 +1,76 @@
 .g2-line {
   font-weight: 400;
-  font-family: FuturaPT;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  min-height: 50px;
-  padding: 15px 20px;
+  min-height: 80px;
+  padding: 0 20px;
   background-color: #ffd500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#157cc7),
+    color-stop(50%, #157cc7),
+    color-stop(50%, #ff0),
+    to(#ff0)
+  );
   background-image: linear-gradient(
     to bottom,
     #157cc7,
     #157cc7 50%,
     #ff0 50%,
     #ff0
-  ) !important;
+  );
+}
+
+.g2-line__btn-save {
+  color: #fff;
+  text-decoration: none;
 }
 
 .g2-line__content {
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-grid;
+  display: grid;
 }
-.stand {
-  color: #111 !important;
+
+.g2-line__stand {
+  color: #111;
   font-weight: bold;
-  position: relative;
-  top: 7px;
 }
 
 .g2-line__text {
-  color: #fff !important;
-  position: relative;
-  top: -7px;
+  color: #fff;
 }
 
 @media (max-width: 780px) {
-  .g2-line__text {
-    position: static !important;
-  }
   .g2-line {
-    padding: 0 2px !important;
+    padding: 0 2px;
   }
   .g2-line__content {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     height: 100%;
     min-height: 100%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
@@ -52,20 +78,7 @@
     height: 100px;
   }
   .g2-line__text {
-    top: -14px;
-  }
-  .stand {
-    top: 0;
-  }
-  .g2-line__content br {
-    display: none;
-  }
-  .stand,
-  .g2-line {
-    position: static;
-  }
-  .g2-line__text {
-    font-size: 13px !important;
-    line-height: 1.2em !important;
+    font-size: 14px;
+    line-height: 1.2em;
   }
 }
