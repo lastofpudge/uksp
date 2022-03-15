@@ -10,6 +10,11 @@
 }
 
 .g2-line {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
   display: -webkit-box;
