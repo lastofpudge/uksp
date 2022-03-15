@@ -1,3 +1,14 @@
+.g2-line__close {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+}
+
 .g2-line {
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
@@ -52,8 +63,13 @@
 }
 
 @media (max-width: 780px) {
+  .g2-line__close {
+    top: 0;
+    right: 0;
+    background-color: crimson;
+  }
   .g2-line {
-    padding: 0 2px;
+    padding: 0 20px;
   }
   .g2-line__content {
     -webkit-box-align: center;
